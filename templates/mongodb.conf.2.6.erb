@@ -72,8 +72,6 @@ storage.engine: <%= @storage_engine_internal %>
 #Security
 <% if @auth -%>
 security.authorization: enabled
-<% else -%>
-security.authorization: disabled
 <% end -%>
 <% if @keyfile -%>
 security.keyFile: <%= @keyfile %>
