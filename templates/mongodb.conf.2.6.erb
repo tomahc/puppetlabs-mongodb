@@ -121,6 +121,9 @@ sharding.clusterRole: configsvr
 <% if @shardsvr -%>
 sharding.clusterRole: shardsvr
 <% end -%>
+<% if @configdb -%>
+sharding.configDB: <%= Array(@configdb).join(',') %>
+<% end -%>
 
 #Operation Profiling
 <% if @profile == "0" -%>
