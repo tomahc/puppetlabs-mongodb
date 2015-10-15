@@ -4,6 +4,7 @@ class mongodb::mongos::config (
   $config         = $mongodb::mongos::config,
   $config_content = $mongodb::mongos::config_content,
   $configdb       = $mongodb::mongos::configdb,
+  $dbpath         = undef,
 ) {
 
   if ($ensure == 'present' or $ensure == true) {
