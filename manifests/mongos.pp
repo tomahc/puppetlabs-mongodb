@@ -1,6 +1,8 @@
 # This installs a Mongo Shard daemon. See README.md for more details.
 class mongodb::mongos (
   $ensure           = $mongodb::params::mongos_ensure,
+  $user             = $mongodb::params::user,
+  $group            = $mongodb::params::group,
   $config           = $mongodb::params::mongos_config,
   $config_content   = undef,
   $configdb         = $mongodb::params::mongos_configdb,
@@ -17,6 +19,8 @@ class mongodb::mongos (
   $logpath          = $mongodb::params::mongos_logpath,
   $fork             = $mongodb::params::mongos_fork,
   $bind_ip          = undef,
+  $keyfile          = undef,
+  $key              = undef,
   $port             = undef,
   $restart          = $mongodb::params::mongos_restart,
   $logappend        = $mongodb::params::mongos_logappend,
